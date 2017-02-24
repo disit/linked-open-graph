@@ -1,0 +1,824 @@
+body.no_control div#axrelations_graph_div{
+	min-height:inherit;
+}
+body.no_control div#axrelations_graph_container{
+	min-height:inherit;
+}
+body.no_control #axrelations_graph_svg{
+	min-height:inherit;
+}
+
+div#axrelations_graph_div{
+	display: block;
+	float:left;
+	width:100%;
+	height:100%; 				
+	min-height:800px;
+	bottom:0px;
+	position:relative;
+}
+
+div#graphContainer{
+	display: block;
+	float:left;
+	width:100%;
+	height:100%; 
+}
+div#grafo{
+	width:80%;
+	height:100%;
+	display: block;
+	border : 10px solid #696969;
+	float:left;
+}			
+body.iPad #axrelations_graph_svg{
+	height:100px;
+}
+#axrelations_graph_svg{
+	overflow:hidden;
+	 height:100%; 
+	 width:100%;
+	 min-height:800px;
+	 opacity:0;
+	 /*min-height:400px;*/
+}
+
+
+#axrelations_graph_main_g{
+	position: relative;
+	display: inline;
+	position: static;
+	width: auto;
+	height: auto;
+	min-height:800px;
+}
+
+svg #graphContainer{
+	width:100%;
+	height:550px;
+	display: inline;
+	cursor: move;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	opacity:0;
+}
+g.node{
+	cursor:pointer;
+}
+h2.axrelations_on{
+	 border-bottom: 3px solid #ff4f00;
+	 /* text-transform: uppercase; */
+	 cursor: pointer;
+	 padding: 3px 3px 3px 15px;
+	 margin: 3px 0px;
+	 margin-bottom: 0px;
+	 background: url("images/expanded-gray.png") no-repeat scroll 4px center transparent;
+}
+h2.axrelations_off{
+	 border-bottom: 3px solid #ff4f00;
+	 /* text-transform: uppercase; */
+	 cursor: pointer;
+	 padding: 3px 3px 3px 15px;
+	 margin: 3px 0px;
+	 background: url("images/collapsed-gray.png") no-repeat scroll 4px center transparent;
+	 /* background-color: #919191; */
+}
+
+div#axrelations_graph_container{
+	width:100%;
+	height:100%;
+	
+	min-height:800px;
+	float:left;
+	float:left;
+	background:url("ajax-loader-big.gif") no-repeat center transparent;
+	position:relative;
+}			
+
+.link {
+   stroke: #ccc; 
+}
+.relation_in{
+	stroke-width: 3;
+}
+/*.relation_out{
+	stroke-width: 2;
+}*/
+#axrelations_graph_def_marker, #axrelations_graph_def_marker_out{
+	markerUnits:strokeWidth;
+	fill:#ccc;
+}
+#axrelations_graph_def_marker_in, #axrelations_graph_def_marker_in_big{
+	markerUnits:strokeWidth;
+	fill:#ccc;
+}
+
+.nodetext {
+  pointer-events: none;
+  font-size: 10px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#axrelations_graph_navigation_panel {			
+	background:Silver;
+	width: 78px; 
+	height:auto;
+	position: absolute;
+	display:none; 
+	background-clip:none;
+	z-index:1000;
+}
+body.firefox  #axrelations_graph_navigation_panel{
+	/* height:180px; */
+	height:auto;
+}
+
+body.firefox  #axrelations_graph_navigation_more{
+	width: 80px; 
+}
+
+#axrelations_graph_navigation_more {			
+	background: Silver;
+	width: 78px; 
+	height:65px;
+	position: absolute;
+	display:none; 
+	background-clip:none;
+	z-index:1000;
+}
+
+#axrelations_graph_outputting{
+	width:100%;
+	height:300px;
+}
+
+button.navigation_button{
+	cursor: pointer;
+	height: 20px;
+	width: 100%;
+	text-shadow: 1px 1px 1px #000;
+}
+body.firefox button.navigation_button{
+	margin-bottom: -2.9px;
+	height: 15.7%;
+}
+button.more_button{
+cursor: pointer;
+height: 50%;
+width: 100%;
+text-shadow: 1px 1px 1px #000;			
+}
+
+.focus {
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+.opaco{
+	opacity:0.6;
+}
+
+
+div#axrelations_options_topleft{
+	float:left;
+	width:140px;
+	height:42px;
+	margin:5px 5px;
+	position:absolute;
+}
+#axrelations_undo{
+	cursor:pointer;
+	float:left;
+	width:42px;
+	height:42px;
+	position:relative;
+}
+/* Css for type of relations*/
+body.firefox  div#axrelations_graph_menu_bottom{
+	height:297px;
+}
+body.Opera  div#axrelations_graph_menu_bottom{
+	height:279px;
+	min-height:279px;
+}
+body.IE  div#axrelations_graph_menu_bottom{
+	height:279px;
+	min-height:279px;
+}
+body.Chrome div#axrelations_graph_menu_bottom{
+	height:280px;
+}
+
+div#axrelations_graph_menu_bottom{				
+	border-bottom: 3px solid #696969;
+	float:left;
+	bottom: 0px;
+	width: 365px; 
+	/* height:100%;	*/
+	min-height:278px;
+	height:278px;	
+	position:relative;
+	bottom:0px;
+	background-color:white;
+	border: 1px #DEDEDE solid;
+	background-color: #EAEAEA;
+	margin-top: 5px;
+	margin-left: 15px;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+div#axrelations_graph_menu_bottom ul{
+  margin-top: 0px;
+  list-style: none;
+  float: right;
+  max-height:75%;
+  overflow-y: auto;
+  padding-left: 0px;
+}
+div#axrelations_graph_menu_bottom ul img{
+	margin-right: 10px;
+}
+
+div#axrelations_graph_menu_bottom li{
+  display: inline-block;
+  width: 170px;
+  margin: 0px;
+  padding: 0px;
+  font-size:11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div#axrelations_graph_menu_bottom h2{
+	float:left;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin: 3px;
+	border-bottom: 1px #696969 solid;
+	width: 96%;
+}
+
+div#axrelations_graph_menu_bottom  input[type="button"]{
+	/* margin: 5px; */
+	padding: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+/* Css for recenter button*/
+#axrelations_recenter{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:105px 5px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+}
+/* Css for screen buttons*/
+#axrelations_screenfull{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:55px 5px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+}
+#axrelations_screenreduce{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:55px 5px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+}
+
+/* Css for zoom buttons*/
+.tool_function{
+	border: 2px solid;
+	border-color: lightslategrey;
+	border-radius: 10px;
+}
+body.no_control .tool_function{
+	display:none;
+}
+#axrelations_zoom_in{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:155px 5px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+}
+#axrelations_zoom_reset{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:205px 5px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+}
+#axrelations_zoom_out{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:255px 5px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+}
+#axrelations_save_configuration{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:5px 55px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+	background-color: #EEEEEE;
+}
+#axrelations_share{
+	right:0;
+	height:40px;
+	margin:5px 105px 5px 5px;
+  padding: 0px 2px;
+	position:absolute;
+	cursor:pointer;
+	background-color: #EEEEEE;
+	font-size:large;
+  line-height: 40px;
+}
+#axrelations_servicemap{
+	right:0;
+	height:40px;
+	width:42px;
+	margin:5px 180px 5px 5px;
+  	padding: 0px 2px;
+	position:absolute;
+	cursor:pointer;
+	background-color: #EEEEEE;
+}
+#axrelations_sblock_nodes{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:305px 5px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+	background-color: #EEE;
+}
+/* Css For help button and popup */
+#axrelations_help{
+	right:0;
+	width:42px;
+	height:42px;
+	margin:5px 5px 5px 5px;
+	position:absolute;
+	cursor:pointer;
+	border:none;
+}
+
+#overlay
+{
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   background: #000000;
+   opacity: .15;
+   filter: alpha(opacity=15);
+   -moz-opacity: .15;
+   z-index: 101;
+   display: none;
+}
+#axrelations_help_dialog
+{
+   display: none;
+   position: fixed;
+   width: 500px;
+   top: 45%;
+   left: 45%;
+   margin-left: -170px;
+   margin-top: -80px;
+   background-color: #ffffff;
+   border: 2px solid #ff4f00;
+   padding: 0px;
+   z-index: 102;
+   font-family: Arial;
+   font-size: 10pt;
+   overflow: auto;
+}
+#axrelations_fullscreen
+{
+   display: none;
+   position: fixed;
+   top: 0px;
+   right: 0px;
+   left: 0px;
+   bottom:0px;
+   margin: 0px;
+   background-color: #ffffff;
+   border: 2px solid #ff4f00;
+   padding: 0px;
+   font-family: Arial;
+   font-size: 10pt;
+   overflow: auto;
+   z-index:7
+}
+#axrelations_help_table{
+	border-collapse: separate;
+}
+.align_right
+{
+   text-align: right;
+}
+    
+.help_dialog_title{
+background-color: #333;
+padding: 4px;
+color: #FFF;
+font-weight: bold;
+}
+#help_btnClose, #fullscreen_btnClose{
+cursor:pointer;
+color: #FFF !important;
+text-decoration: none;
+}
+#axrelations_change_page, #axrelations_change_page_servicemap
+{
+  display: none;
+  position: fixed;
+  width: 400px;
+  top: 40%;
+  left: 45%;
+  margin-left: -170px;
+  margin-top: -80px;
+  background-color: #ffffff;
+  border: 2px solid #ff4f00;
+  padding: 0px;
+  z-index: 102;
+  font-family: Arial;
+  font-size: 10pt;
+}
+#axrelations_change_page_servicemap
+{
+  display: initial;
+}
+
+g.node circle.inbound_expanded{
+	/* fill: #F5FF00; */
+	fill: #FF5F5F; 
+}
+g.node circle.inbound_reduced{
+	/* fill:#69C7F3; */
+	fill:#6CDB67; 
+}
+g.node circle.expanded{
+	fill: #FF5F5F; 
+	/* fill:url(#r_grad)  */
+}
+g.node circle.reduced{
+	fill:#6CDB67; 
+	/* fill: url(#g_grad);  */
+}
+div#axrelations_info{
+	position:absolute;
+	height:400px;
+	width:410px;
+	border-width: 1px;
+	border: solid;
+	border-color: #696969;
+	border-radius: 3px;
+	margin-top: 60px;
+	background-color: peachpuff;
+}
+div.axrelations_more_info {
+	width:500px !important;
+}
+div#axrelations_info_main_div{
+	overflow-y: auto;
+	height:94%;
+	/* height: 374px; */
+	margin-left: 10px;
+}
+div#axrelations_search_main_div{
+	overflow-y: auto;
+	height:94%;
+}
+div.axrelations_info_view ul   {
+	/* max-height: 300px; */
+	overflow-y: auto;
+	border-width: 1px;
+	border: solid;
+	border-color: #696969;
+	border-radius: 3px;
+	font-size: 14px;
+	list-style: none outside none;
+	padding-left: 10px;
+}
+.axrelations_search ul{
+	overflow-y: auto;
+	font-size: 14px;
+	list-style: none outside none;
+	padding-left: 10px;
+}
+div#axrelations_info p.property_name{
+	font-weight: bold;
+}
+div#axrelations_info div#axrelations_info_title{
+border-width: 1px;
+border: solid;
+background: #696969;
+border-color: #696969;
+padding-left: 15px;
+color: white;
+cursor: move;
+}
+div#axrelations_info a#axr_info_close{
+	cursor: pointer;
+	float:right;
+	padding-right: 5px;
+	text-decoration: none;
+}
+img#axrelations_info_loading_gif{
+	width:initial !important;
+	padding-left: 40% !important;
+	height: initial !important;
+	margin-top: 10px;
+}
+div#axrelations_info img{
+	height:100px;
+	/*width:200px;*/
+	margin-top: 10px;
+	padding-left: 20px;
+}
+div#axrelations_info .ui-resizable-handle{
+	/* border-bottom-width: 0px !important; */
+	/* border-bottom-style: none !important; */
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+div#axrelations_save_dialog, div#axrelations_share_dialog, div#config_examples_dialog, div#ep_example_dialog, div#axrelations_servicemap_dialog{
+	position:fixed;
+	height:430px;
+	width:30%;
+	border-width: 1px;
+	border: solid;
+	border-color: #696969;
+	border-radius: 3px;
+	margin-top: 60px;
+	margin-left:43%;
+	background-color: whitesmoke;
+	z-index:102;
+}
+div#config_examples_dialog{
+	top: 10px;
+	width:70%;
+	margin-left:15%;
+	overflow-y:none; 
+	overflow-x:scroll;
+	height: 80%;
+}
+div#axrelations_share_dialog,div#ep_example_dialog{
+	height:510px;
+	margin-top:40px;
+	overflow-y: auto;
+}
+div#ep_example_dialog{
+	height:140px;
+	overflow-y: inherit;
+	width:25%;
+}
+div#axrelations_share_dialog input[type="text"]{
+	width:50px;
+}
+div#axrelations_share_dialog .share_left{
+	float:left;
+	margin-right:10px;
+}
+div#axrelations_share_dialog .share_right{
+	float:right;
+	margin-right:10px;
+}
+#axrelations_save_dialog #graph_save_desc{
+	width: 95%;
+	height: 125px;
+}
+div#axrelations_save_dialog.resave {
+	height:470px;
+}
+div#axrelations_save_dialog.small {
+	height:200px;
+}
+div#axrelations_save_dialog.mini {
+	height:105px;
+	width:25%;
+}
+div#axrelations_save_dialog.mini #axrelations_save_main_div{
+	overflow-y:inherit;
+	padding-right:20px;
+}
+div#axrelations_save_dialog div#axrelations_info_title, div#axrelations_share_dialog div#axrelations_info_title , div#config_examples_dialog div#config_examples_title,
+div#ep_example_dialog div#ep_example_title, div#axrelations_servicemap_dialog div#axrelations_info_title{
+	border-width: 1px;
+	border: solid;
+	background: #696969;
+	border-color: #696969;
+	padding-left: 15px;
+	color: white;
+}
+div#axrelations_servicemap_dialog table{
+	/* table-layout: fixed; */
+}
+div#axrelations_servicemap_dialog th{
+    background-color: #696969;
+    color: white;
+}
+div#axrelations_servicemap_dialog table, div#axrelations_servicemap_dialog th, div#axrelations_servicemap_dialog td{
+	border: 1px solid #696969;
+}
+div#axrelations_servicemap_dialog table .first_column{
+	width: 35px;
+}
+div#axrelations_save_dialog a#axr_save_close, #axr_view_close, #axr_viewmore_close, #axr_srch_close, #axr_share_close, #config_examples_close, #ep_example_close,  div#axrelations_servicemap_dialog div#axrelations_info_title #axr_servicemap_close{
+	cursor: pointer;
+	float:right;
+	text-decoration: none;
+}
+div#axrelations_save_main_div , div#axrelations_share_main_div , div#config_examples_main_div, #ep_example_main_div, #axrelations_servicemap_main_div{
+	overflow-y: auto;
+	/* max-height: 490px; */
+	padding-left: 20px;
+	height: 95%;
+	overflow-y: scroll;
+}
+div#axrelations_save_main_div #ax_save_overwrite{
+	margin-left: 30%;
+	margin-right: 25px;
+}
+div#ep_example_main_div{
+	overflow-y:inherit; 
+	height:140px;
+}
+div#axrelations_servicemap_main_div{
+	overflow-y:inherit; 
+	height:80%;
+	margin-top:	10px;
+}
+#axrelations_servicemap_main_div div#show_results{
+	margin-top:10px;
+	overflow:auto;
+	height:90%;
+	margin-right:10px;
+}
+#axrelations_servicemap_main_div .user_options button{
+	height:25px;
+	width:60px;
+	margin-right:20px;
+}
+div#ep_example_main_div p{
+	margin-top:25px;
+	/* font-size:medium; */
+}
+div#ep_example_main_div img{
+	width: 70px;
+	height: 35px;
+}
+div#ep_example_main_div #ep_example_proced{
+	padding-left: 25%;
+	margin-right: 15px;
+}
+div#config_examples_main_div{
+	height: auto;
+	overflow-y: auto;
+}
+div#axrelations_share_main_div #axr_embed_link{
+	width: 90%;
+}
+.axrelations_search ,.axrelations_view_query{
+	min-width:875px !important;
+}
+.axrelations_view_query{
+	margin-top:0px !important;
+	margin-left: 150px;
+}
+.axrelations_search .prop_right{
+	float:right;
+}
+.axrelations_view_query table,.axrelations_view_query th, .axrelations_view_query td
+{
+	border:1px solid black;
+	border-collapse:collapse;
+	overflow-y: auto;
+	border-width: 1px;
+	border: solid;
+	border-color: #696969;
+	border-radius: 3px;
+	font-size: 12px;
+	list-style: none outside none;
+	padding-left: 0px;
+}
+.axrelations_view_query th,.axrelations_view_query td{
+	padding:5px;
+}
+.inner_table {
+    height: 167px;
+    overflow-y: auto;
+}
+.axrelations_search hr{
+	width:98%;
+	border:2px solid;
+	color:#696969;
+	radius:5px;
+}
+#error_uri_empty{
+	margin: 10px 3px;
+}
+body.no_desc #graph_description_container , body.no_info .ax_descriptions{
+	display:none;
+}
+#graph_description_container{
+	
+	height:400px;
+	display:inline-block;
+	border: 2px solid;
+	margin: 355px 5px 5px 5px;
+	position: absolute;
+	right: 0;
+	border-color: lightslategrey;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #FFF;
+}
+#graph_description_container #graph_description_box{
+	width:280px;
+	height:396px;
+	/*border: 2px solid;
+	margin: 305px 5px 5px 5px;
+	border-radius: 10px;
+	position: absolute;
+	right: 0;*/
+	border-color: lightslategrey;
+	float:right;
+	margin-left:5px;
+}
+#graph_description_container #left_bracket{
+	height: 100%;
+	float: left;
+	width: 15px;
+	background-color: lightslategrey;
+	cursor:pointer;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+body.firefox	#graph_description_container #left_bracket p{
+	transform: rotate(90deg);
+}
+#graph_description_container #left_bracket p{
+	-webkit-transform: rotate(90deg);
+}
+#graph_description_container #left_bracket p{
+	color:lightgray;
+}
+#graph_description_container .open{
+	background: url("images/collapsed-gray.png") no-repeat scroll 4px center rgba(0, 0, 0, 0);
+}
+#graph_description_container .close{
+	background: url("images/collapsed-gray-left.png") no-repeat scroll 4px center rgba(0, 0, 0, 0);
+}
+#graph_description_container .description_title{
+	max-height:80px;
+	overflow-y:auto;
+}
+#graph_description_container .description_text{
+	max-height:300px;
+	overflow-y:auto;
+}
+#graph_report{
+	float: left;
+	margin: 5px;
+	position: relative;
+	cursor: pointer;
+}
+
+button.more_search{
+	cursor: pointer;
+	margin-left: 5px;
+	height: 22px;
+	width: 65px;
+	/* text-shadow: 1px 1px 1px #000;			 */
+} 
+
+button#embed_preview{
+	height:35px;
+	width:80px;
+}
+save_mini{
+	height:135px;
+}
+ g.node:hover > rect{
+	/* fill:red; */
+	fill:lightsteelblue; 
+} 

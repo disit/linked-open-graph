@@ -1,0 +1,282 @@
+/* Linked Open Graph
+   Copyright (C) 2017 DISIT Lab http://www.disit.org - University of Florence
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Affero General Public License as
+   published by the Free Software Foundation, either version 3 of the
+   License, or (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Affero General Public License for more details.
+
+   You should have received a copy of the GNU Affero General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+
+body {
+    font-family: Verdana;
+    font-size: 10px;
+}
+/* and{
+	display:none;
+} */
+div#center {
+	
+}
+div#center  input[type="text"]{
+	width:300px;
+}
+body.firefox div#center input[type="text"] {
+    width: 295px;
+}
+.panels_on h1 {
+  border-bottom: 3px #FF5F5F solid;  
+  margin-bottom: -5px;
+  padding: 3px 3px 3px 15px;
+  background: url("images/expanded-gray.png") no-repeat scroll 4px center rgba(0, 0, 0, 0);
+}
+.panels_off h1 {
+  border-bottom: 3px #FF5F5F solid;  
+  margin-bottom: -5px;
+  padding: 3px 3px 3px 15px;
+  background: url("images/collapsed-gray.png") no-repeat scroll 4px center rgba(0, 0, 0, 0);
+  cursor:pointer;
+}
+
+.endpoint {
+    float: left;
+    width: 400px;
+    min-height: 112px;
+    border: 1px #dedede solid;
+    background-color: #eaeaea;
+    margin: 5px;
+    padding: 5px;
+}
+body.Opera #status_panel{
+	min-height:152px;
+}
+body.IE #status_panel {
+	min-height:152px;
+}
+.endpoint  p{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.graph_options{
+	min-height:10px;
+	height:auto;
+	position:relative;
+	margin:5px;
+	margin-top:0px;
+	padding-top: 0px;
+}
+.graph_options h2{
+	cursor: pointer;
+}
+.graph_options h2.open{
+	background: url("images/expanded-gray.png") no-repeat scroll 70px center rgba(0, 0, 0, 0);
+}
+.graph_options h2.close{
+	background: url("images/collapsed-gray.png") no-repeat scroll 70px center rgba(0, 0, 0, 0);
+}
+.endpoint h2 {
+    margin: 3px;
+    font-size: 15px;
+    border-bottom: 1px #696969 solid;
+}
+
+.active {
+    background-color: rgb(175, 170, 170);
+}
+
+.examples {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* body.Android select.EndPoints{
+	font-size: none;
+    font-weight: none;
+    border: none;
+    border-bottom: none;
+} */
+
+.endpoint select.EndPoints {
+    width: 400px;
+    font-size: 15px;
+    font-weight: bold;
+    /* background-color: inherit; */
+    border: 1px #dedede solid;
+    border-bottom: 1px #696969 solid;
+}
+
+#list_of_adds{
+	display:none;
+}
+
+.ui-dialog{
+	width:100%;
+}
+.ui-dialog-container{
+	border: solid 1px;
+	border-radius: 4px;
+	background-color: #FFF;
+}
+.ui-dialog-titlebar{
+	background-color: #D3D3D3;
+	height: 20px;
+	margin: 4px 4px;
+	border-radius: 2px;
+}
+.ui-dialog-titlebar-close{
+	right: 20px !important;
+}
+.autocomplete{
+	display: none;
+}
+#Suggestion{
+	position: absolute; 
+	z-index: 100; 
+	display: block; 
+	left: 20px; 
+	
+	background: #FFF;
+	width: 301px;
+	border: solid 1px;
+}
+#Suggestion span{
+	font-size: 11px;
+	font-weight: normal;
+	display: block;
+	padding-left: 6px;
+	cursor: pointer;
+	line-height: 20px;
+}
+#Suggestion  .over{
+	background-color:#3DADF8;
+}
+#close_suggestion{
+	text-align: right;
+	padding-right: 10px;
+	font-family: cursive;
+	font-weight: bolder;
+}
+#close_suggestion a{
+	cursor: pointer;
+}
+
+#prefix_search{
+	display:none;
+}
+#prefix_search.keyword{
+	display:block;
+}
+#button_add_graph{
+	float: right;
+	margin-right: 21px;
+	margin-top: -10px;
+	width: 46px;
+}
+#dialog_server_error p{
+	margin-right: 13px;
+}
+#status_panel select{
+	/*width: 400px;*/
+	height: 60px;
+	font-family:"Courier New", Verdana, monospace;
+}
+.endpoint select.uri_added{
+    min-width:400px;
+    border: 1px #dedede solid;
+    border-bottom: 1px #696969 solid;
+}
+.scrollable{
+	overflow-x: auto;
+	width: 404px; /* adjust this width depending to amount of text to display */
+	height: 76px; /* adjust height depending on number of options to display */
+	margin-left: -2px;
+	
+	/*border: 1px silver solid;*/
+}
+.scrollable select{
+	border: none;
+}
+#status_panel #clear_graph{
+	margin-left:32%;
+}
+.list_of_class{
+	width:100%;
+	margin-bottom: 11px;
+}
+body.Chrome .list_of_class{
+	width:100%;
+	margin-bottom: 13px;
+}
+body.Opera .list_of_class{
+	margin-bottom: 10px;
+}
+body.IE .list_of_class{
+	margin-bottom: 13px;
+}
+
+#div_class_select{
+	display:none;
+}
+.left_panel{
+	float: left;
+	width: 400px;
+	height: 296px;
+	margin-right: 5px;
+	padding-right: 5px;
+}
+.user_status{
+	float:left;
+	width:400px;
+	margin-left: 5px;
+	padding-left: 5px;
+	margin-right: 5px;
+	padding-right: 5px;
+}
+body.Chrome #status_panel{
+	margin-top: 2px;
+}
+/* body.iPad  #container{
+	background-color: #DCDCDC;
+}
+body.Android #container{
+	background-color: #5F9EA0;
+} */
+
+#relation{
+    margin-top: 5px;
+    float: right;
+}
+#display{
+    float:left;
+    margin: 10px;
+}
+#search_list{
+    margin: 10px;
+    float:left;
+}
+#search_button{
+    margin-top: 10px;
+    clear: both;
+    margin-left: 10px;
+}
+#counter_container{
+    margin-top: 5px;
+    margin-left: 10px;
+    clear: both;
+}
+#specification{
+    margin-left: 10px;
+}
+#global{
+    float: right;
+}
+

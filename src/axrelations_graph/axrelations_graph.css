@@ -1,0 +1,302 @@
+			div#axrelations_graph_div{
+				display: block;
+				float:left;
+				width:100%;
+				height:82%; 				
+				min-height:800px;
+				bottom:0px;
+				position:relative;
+			}
+
+			div#graphContainer{
+				display: block;
+				float:left;
+				width:100%;
+				height:100%; 
+			}
+			div#grafo{
+				width:80%;
+				height:100%;
+				display: block;
+				border : 10px solid #696969;
+				float:left;
+			}			
+			#axrelations_graph_svg{
+				overflow:hidden;
+				 height:100%; 
+				 width:100%;
+				 min-height:800px;
+				 /*min-height:400px;*/
+			}
+			
+			
+			#axrelations_graph_main_g{
+				position: relative;
+				display: inline;
+				position: static;
+				width: auto;
+				height: auto;
+				min-height:800px;
+			}
+			
+			svg #graphContainer{
+				width:100%;
+				height:550px;
+				display: inline;
+				cursor: move;
+				overflow-x: hidden;
+				overflow-y: hidden;
+				opacity:0;
+			}
+			g.node{
+				cursor:pointer;
+			}
+			h2.axrelations_on{
+				 color: #777777;
+				 border-bottom: 3px solid #ff4f00;
+				 text-transform: uppercase;
+				 cursor: pointer;
+				 padding: 3px 3px 3px 15px;
+         margin: 3px 0px;
+				 background: url("expanded-gray.png") no-repeat scroll 4px center transparent;
+			}
+			h2.axrelations_off{
+				 color: #777777;
+				 border-bottom: 3px solid #ff4f00;
+				 text-transform: uppercase;
+				 cursor: pointer;
+				 padding: 3px 3px 3px 15px;
+         margin: 3px 0px;
+				 background: url("collapsed-gray.png") no-repeat scroll 4px center transparent;
+			}
+			
+			div#axrelations_graph_container{
+				width:97%;
+				height:100%;
+				
+				min-height:800px;
+				float:left;
+				float:left;
+				background:url("ajax-loader-big.gif") no-repeat center transparent;
+				position:relative;
+			}			
+			
+			.link {
+			   stroke: #ccc; 
+			}
+
+			.nodetext {
+			  pointer-events: none;
+			  font-size: 10px;
+			  font-family: Verdana, Arial, Helvetica, sans-serif;
+			}
+			
+			#axrelations_graph_navigation_panel {			
+			background: Silver;
+			width: 72px; 
+			height:120px;
+			position: absolute;
+			display:none; 
+			background-clip:none;
+			z-index:1000;
+			}
+			
+			#axrelations_graph_outputting{
+			width:100%;
+			height:300px;
+			}
+			
+			button.navigation_button{
+			cursor: pointer;
+			height: 33%;
+			width: 100%;
+			text-shadow: 1px 1px 1px #000;			
+			}
+			
+			.focus {
+			  stroke: #333;
+			  stroke-width: 1.5px;
+			}
+			
+			.opaco{
+				opacity:0.6;
+			}
+			
+			input#axrelations_undo{
+				float:left;
+				width:42px;
+				height:42px;
+				margin:5px 5px;
+				position:absolute;
+				cursor:pointer;
+			}
+			/* Css for type of relations*/
+			div#axrelations_graph_menu_bottom{				
+				border-top: 3px solid #696969;
+				float:left;
+				bottom: 0px;
+				/* width:97%; */
+				/* height:100%;	*/
+				position:relative;
+				bottom:0px;
+			}
+			div#axrelations_graph_menu_bottom ul{
+			  list-style: none;
+			  float: right;
+			}
+
+			div#axrelations_graph_menu_bottom li{
+			  display: inline-block;
+			  width: 134px;
+			}
+			
+			div#axrelations_graph_menu_bottom h2{
+				float:left;
+			}
+			
+			div#axrelations_graph_menu_bottom  input[type="button"]{
+				margin: 3px;
+				padding: 3px;
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 11px;
+			}
+			
+			/* Css for recenter button*/
+			input#axrelations_recenter{
+				right:0;
+				width:42px;
+				height:42px;
+				margin:105px 5px 5px 5px;
+				position:absolute;
+				cursor:pointer;
+			}
+			/* Css for screen buttons*/
+			input#axrelations_screenfull{
+				right:0;
+				width:42px;
+				height:42px;
+				margin:55px 5px 5px 5px;
+				position:absolute;
+				cursor:pointer;
+			}
+			input#axrelations_screenreduce{
+				right:0;
+				width:42px;
+				height:42px;
+				margin:55px 5px 5px 5px;
+				position:absolute;
+				cursor:pointer;
+			}
+			
+			/* Css for zoom buttons*/
+			input#axrelations_zoom_in{
+				right:0;
+				width:42px;
+				height:42px;
+				margin:155px 5px 5px 5px;
+				position:absolute;
+				cursor:pointer;
+			}
+			input#axrelations_zoom_reset{
+				right:0;
+				width:42px;
+				height:42px;
+				margin:205px 5px 5px 5px;
+				position:absolute;
+				cursor:pointer;
+			}
+			input#axrelations_zoom_out{
+				right:0;
+				width:42px;
+				height:42px;
+				margin:255px 5px 5px 5px;
+				position:absolute;
+				cursor:pointer;
+			}
+			
+			/* Css For help button and popup */
+			input#axrelations_help{
+				right:0;
+				width:42px;
+				height:42px;
+				margin:5px 5px 5px 5px;
+				position:absolute;
+				cursor:pointer;
+			}
+			
+			#overlay
+			{
+			   position: fixed;
+			   top: 0;
+			   right: 0;
+			   bottom: 0;
+			   left: 0;
+			   height: 100%;
+			   width: 100%;
+			   margin: 0;
+			   padding: 0;
+			   background: #000000;
+			   opacity: .15;
+			   filter: alpha(opacity=15);
+			   -moz-opacity: .15;
+			   z-index: 101;
+			   display: none;
+			}
+			#axrelations_help_dialog
+			{
+			   display: none;
+			   position: fixed;
+			   width: 500px;
+			   top: 45%;
+			   left: 45%;
+			   margin-left: -170px;
+			   margin-top: -80px;
+			   background-color: #ffffff;
+			   border: 2px solid #ff4f00;
+			   padding: 0px;
+			   z-index: 102;
+			   font-family: Arial;
+			   font-size: 10pt;
+			   overflow: auto;
+			}
+			#axrelations_fullscreen
+			{
+			   display: none;
+			   position: fixed;
+			   top: 0px;
+			   right: 0px;
+			   left: 0px;
+			   bottom:0px;
+			   margin: 0px;
+			   background-color: #ffffff;
+			   border: 2px solid #ff4f00;
+			   padding: 0px;
+			   font-family: Arial;
+			   font-size: 10pt;
+			   overflow: auto;
+			   z-index:7
+			}
+			#axrelations_help_table{
+				border-collapse: separate;
+			}
+			.align_right
+			{
+			   text-align: right;
+			}
+      
+#axrelations_change_page
+{
+  display: none;
+  position: fixed;
+  width: 400px;
+  top: 40%;
+  left: 45%;
+  margin-left: -170px;
+  margin-top: -80px;
+  background-color: #ffffff;
+  border: 2px solid #ff4f00;
+  padding: 0px;
+  z-index: 102;
+  font-family: Arial;
+  font-size: 10pt;
+}

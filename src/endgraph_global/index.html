@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+/* Linked Open Graph
+   Copyright (C) 2017 DISIT Lab http://www.disit.org - University of Florence
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Affero General Public License as
+   published by the Free Software Foundation, either version 3 of the
+   License, or (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Affero General Public License for more details.
+
+   You should have received a copy of the GNU Affero General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+
+<html>
+    <head>
+        <title>Endpoints Graph</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="info">
+            <p>-Circle: it is RDF Store that contains RDF triple</p>
+            <p>-Line: the starting RDF Store contains at least one RDF triple belonging to the ending (arrow) RDF Store</p>
+            <p>-LightBlue: the RDF Store is present in LOG Database. With double-click goes to the selected RDF Store on LOG</p>
+            <p>-Orange: the RDF Store is not present in LOG Database</p>
+            <p>To show RDF Store information go on it with mouse</p>
+        </div>
+    </body>
+</html>

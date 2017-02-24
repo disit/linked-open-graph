@@ -1,0 +1,1 @@
+type_icons.json contains the association between type and images to display in social graph. If an item retrieved with sparql has no image, in this file there are some image to choise. In this file there are associations between type (express with uri) and images. An image at the head of the file has more priority respect at an image at the end of the file.

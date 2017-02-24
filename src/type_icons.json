@@ -1,0 +1,16 @@
+{
+    "types": [
+		{
+			"type_name": "http://schema.org/Person",
+            "image": "user.png"
+		},
+		{
+			"type_name": "http://dbpedia.org/ontology/Place",
+            "image": "place.png"
+		},
+		{
+			"type_name": "http://dbpedia.org/property/hasPhotoCollection",
+            "image": "gallery_icon.jpg"
+		}
+    ]
+}

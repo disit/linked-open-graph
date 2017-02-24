@@ -1,0 +1,124 @@
+{
+    "relations": [
+        {
+            "type_name": "creator",
+            "name": "Creator",
+            "checked": "true"
+        },
+        {
+            "type_name": "groups",
+            "name": "Groups",
+            "checked": "true"
+        },
+        {
+            "type_name": "favorite",
+            "name": "Favorite",
+            "checked": "true"
+        },
+        {
+            "type_name": "taxonomies",
+            "name": "Taxonomies",
+            "checked": "true"
+        },
+        {
+            "type_name": "collections",
+            "name": "Collections",
+            "checked": "true"
+        },
+        {
+            "type_name": "annotations",
+            "name": "Annotations",
+            "checked": "true"
+        },
+        {
+            "type_name": "comments",
+            "name": "Comments",
+            "checked": "true"
+        },
+		{
+            "type_name": "related objects",
+            "name": "Related Objects",
+            "checked": "true"
+        },
+        {
+            "type_name": "colleagues",
+            "name": "Colleagues",
+            "checked": "true"
+        },
+        {
+            "type_name": "publications",
+            "name": "Publications",
+            "checked": "true"
+        },
+        {
+            "type_name": "favorites",
+            "name": "User's favorites",
+            "checked": "true"
+        },
+        {
+            "type_name": "members",
+            "name": "Group member",
+            "checked": "true"
+        },
+        {
+            "type_name": "admin",
+            "name": "Administrators",
+            "checked": "true"
+        },
+        {
+            "type_name": "writer",
+            "name": "Writer",
+            "checked": "true"
+        },
+		{
+            "type_name": "reference",
+            "name": "Annotation reference",
+            "checked": "true"
+        },		
+        {
+            "type_name": "cited by",
+            "name": "Cited by",
+            "checked": "true"
+        },
+        {
+            "type_name": "synonymous",
+            "name": "Synonymous",
+            "checked": "true"
+        },
+        {
+            "type_name": "featured",
+            "name": "Featured",
+            "checked": "true"
+        },
+        {
+            "type_name": "places",
+            "name": "Places",
+            "checked": "true"
+        },
+        {
+            "type_name": "broader",
+            "name": "Broader",
+            "checked": "true"
+        },
+        {
+            "type_name": "narrower",
+            "name": "Narrower",
+            "checked": "true"
+        },
+        {
+            "type_name": "formed",
+            "name": "Formed",
+            "checked": "true"
+        },
+        {
+            "type_name": "belong",
+            "name": "Belong",
+            "checked": "true"
+        },
+        {
+            "type_name": "cited names",
+            "name": "Cited Names",
+            "checked": "true"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "types": [
+        {
+			"type_name": "http://schema.org/Person",
+            "image": "/spqlgraph/images/icons/user.png"
+		},
+		{
+			"type_name": "http://dbpedia.org/property/hasPhotoCollection",
+            "image": "gallery_icon.jpg"
+		}
+    ]
+}

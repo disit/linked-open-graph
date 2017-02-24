@@ -1,0 +1,19 @@
+{
+    "relations": [
+        {
+			"type_name": "http://www.w3.org/2002/07/owl#sameAs",
+            "name": "sameAs",
+            "checked": "false"
+		},
+		{
+			"type_name": "http://xmlns.com/foaf/0.1/depiction",
+            "name": "depiction",
+            "checked": "false"
+		},
+		{
+			"type_name": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+            "name": "seeAlso",
+            "checked": "close"
+		}
+    ]
+}

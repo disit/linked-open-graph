@@ -1,0 +1,80 @@
+/* Linked Open Graph
+   Copyright (C) 2017 DISIT Lab http://www.disit.org - University of Florence
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Affero General Public License as
+   published by the Free Software Foundation, either version 3 of the
+   License, or (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Affero General Public License for more details.
+
+   You should have received a copy of the GNU Affero General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%
+}
+
+
+.node circle {
+    cursor: pointer;
+    stroke: #000000;
+    stroke-width: 0.2px;
+}
+
+.node text {
+    font: 10px sans-serif;
+    pointer-events: none;
+    text-anchor: middle;
+}
+
+line.link {
+    fill: none;
+    stroke: #919191;
+    stroke-width: 0.5px;
+}
+
+div.tooltip {   
+    position: absolute;           
+    text-align: center;           
+    width: 120px;                  
+    height: auto;                 
+    padding: 2px;             
+    font: 12px sans-serif;        
+    /*background: lightsteelblue;   */
+    border: 0px;      
+    border-radius: 10px;           
+    pointer-events: none;
+    z-index: 10;
+}
+
+#info{
+    background-color: beige;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 1px 4px 12px 0px rgba(50, 50, 50, 0.67);
+    -moz-box-shadow:    1px 4px 12px 0px rgba(50, 50, 50, 0.67);
+    box-shadow:         1px 4px 12px 0px rgba(50, 50, 50, 0.67);
+    z-index: 5;
+    position: fixed;
+    right: 20px;
+    top:20px;
+    width:250px;
+}
+
+#info p{
+    padding-top: 10px;
+    margin: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
+}
