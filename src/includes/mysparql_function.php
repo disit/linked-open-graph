@@ -1179,7 +1179,7 @@ function get_suggestion($endpoint_selected, $text, $type, $search_InClass){
 		$subquery="";
 		if($search_InClass=='keyword'){
 			// print "ciao";
-			// var_dump($endpoint_with_suggest);
+		 	//var_dump($endpoint_with_suggest);
 			if(!$endpoint_with_suggest[$endpoint_selected])return $suggestion;
 			foreach ($endpoint_with_suggest[$endpoint_selected] as $dataprop){
 				if($subquery!="")$subquery.=" UNION ";
@@ -1196,7 +1196,7 @@ function get_suggestion($endpoint_selected, $text, $type, $search_InClass){
 						break;
 				}
 			}
-			$suggest_query="SELECT DISTINCT ?s (str(?label) as ?label) WHERE{".$subquery ."} LIMIT ".$suggestion_number;
+			$suggest_query="SELECT DISTINCT ?s (str(?label) as ?label_str) WHERE{".$subquery ."} LIMIT ".$suggestion_number;
 		}
 		else{//for a search in a class the query change.
 			// $subquery="{?s ?p <".$search_InClass ."> FILTER regex(str(?s), '".$text ."', 'i')} ";
@@ -1215,9 +1215,9 @@ function get_suggestion($endpoint_selected, $text, $type, $search_InClass){
 					$subquery="{?s a <".$search_InClass .">. ?s ?p ?label FILTER (isLiteral(?label) && regex(str(?label), '".$text ."', 'i'))} ";
 					break;
 			}
-			$suggest_query="SELECT DISTINCT ?s (str(?label) as ?label) WHERE{".$subquery ."} LIMIT ".$suggestion_number;
+			$suggest_query="SELECT DISTINCT ?s (str(?label) as ?label_str) WHERE{".$subquery ."} LIMIT ".$suggestion_number;
 		} 
-		// var_dump($suggest_query);print"</br></br>";
+		//var_dump($suggest_query);print"</br></br>";
 		// return;
 		$result = sparql_query( $suggest_query );
 		if($result){
@@ -1225,9 +1225,11 @@ function get_suggestion($endpoint_selected, $text, $type, $search_InClass){
 			while( $row = sparql_fetch_array( $result ) )
 			{
 				$suggestion[$j]['URI']=$row['s'];
-				$suggestion[$j]['Label']=$row['label'];
+				$suggestion[$j]['Label']=$row['label_str'];
 				$j++;				
 			}
+		} else {
+			print sparql_error(). "\n"; 
 		}
 	}
 	else{ mysparql_error($endpoint_selected." NOT ALIVE\n".$db->error."\n-----------");}
